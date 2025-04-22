@@ -7,6 +7,10 @@
   --gray2: rgba(53, 57, 69, 0.8);
   --gray1: #23262f;
   --gray3b: #3b3e44;
+  --gray4: #b1b5c3;
+  --gray7: #e6e8ec;
+  --fs-default: 14px;
+  --fw-default: 400;
 }
 
 * {
@@ -18,15 +22,45 @@
 
 body {
   font-family: var(--primary-font);
-  background-color: #f5f5f5;
-  font-weight: 500;
-  padding: 30px 24px;
+  background-color: #ffffff;
+  font-weight: var(--fw-default);
+  color: var(--gray4);
+  font-size: var(--fs-default);
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  outline: none;
+  font: inherit;
+}
+
+button,
+input,
+textarea {
+  border: none;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   width: 100%;
   margin: 30px auto;
+  padding: 0 15px;
 }
 
 .tour-list-heading {
@@ -50,6 +84,7 @@ body {
   width: calc(33.33% - 30px);
   word-break: break-word;
   margin-left: 30px;
+  box-shadow: 0 12px 64px rgba(4, 4, 4, 0.08);
 }
 
 .tour-top {
@@ -169,8 +204,9 @@ body {
 
 .sight-item {
   padding-bottom: 14px;
-  border-radius: 14px 14px 0 0;
+  border-radius: 14px;
   background-color: white;
+  box-shadow: 0 12px 64px rgba(4, 4, 4, 0.08);
 }
 
 .sight-image {
@@ -247,12 +283,252 @@ body {
   font-size: 14px;
 }
 
-/* Gems highlight */
-.gem-highlight {
-  background-color: black;
-  color: blue;
-  background-color: red;
-  /* update 4 */
+/* Grid layout practice  */
+.heading {
+  margin: 0 0 30px;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-rows: 300px 300px 150px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  gap: 15px;
+}
+
+.grid-item {
+  /* max-width: 200px; */
+  position: relative;
+}
+
+.grid-item span {
+  position: absolute;
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: white;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.grid-item:first-child {
+  /* background-color: red; */
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.grid-item:nth-child(3) {
+  grid-column: 1/2;
+}
+
+.grid-item:nth-last-child(2) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.grid-item:last-child {
+  grid-column: 2/4;
+}
+
+/* Gems */
+
+.hidden-gems {
+  background-color: #fcfcfc;
+  padding-bottom: 70px;
+}
+
+.hidden-gems .container {
+  max-width: 998px;
+}
+
+.hidden-gems .heading {
+  text-align: center;
+  color: var(--gray2);
+}
+
+.gem-list {
+  display: grid;
+  grid-template-rows: 220px 220px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.gem-item {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 30px 110px rgba(0, 0, 0, 0.08);
+}
+
+.gem-image {
+  border-radius: inherit;
+  position: relative;
+  height: 100%;
+}
+
+.gem-image img {
+  width: 100%;
+  height: 196px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.gem-content {
+  background: linear-gradient(
+    8.83deg,
+    rgba(0, 0, 0, 0.56) 22.88%,
+    rgba(0, 0, 0, 0) 58.17%
+  );
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 14px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: inherit;
+}
+
+.gem-title {
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.gem-time {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 999px;
+  width: fit-content;
+  cursor: pointer;
+  color: var(--primary-font-color);
+  outline: none;
+}
+
+.explore-button {
+  margin: 70px auto 0;
+  padding: 9px 40px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Footer */
+
+.footer {
+  padding: 68px 0;
+}
+
+.footer-container {
+  max-width: 1130px;
+}
+
+.footer-top {
+  border-bottom: solid 1px var(--gray7);
+  padding: 0 15px;
+  padding-bottom: 71px;
+}
+
+.footer-column-heading {
+  color: var(--gray1);
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--gray1);
+  font-weight: 800;
+}
+
+.footer-logo-name {
+  margin-left: 15px;
+}
+
+.footer-information {
+  margin-bottom: 30px;
+  color: var(--gray1);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-subscribe {
+  padding: 8px 8px 8px 26px;
+  border-radius: 100rem;
+  border: solid 2px var(--gray7);
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-email {
+  width: 100%;
+  padding-inline: 10px;
+}
+
+.footer-submit {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100rem;
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+}
+
+.footer-column-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.footer-copyright {
+  line-height: 20px;
+}
+
+.footer-media-list {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width: 1023.98px) {
@@ -268,5 +544,60 @@ body {
 @media screen and (max-width: 767.9px) {
   .sight-list {
     --columns: 1;
+  }
+
+  .grid-list {
+    grid-template-rows: 150px 150px 100px;
+  }
+
+  .hidden-gems {
+    padding-bottom: 30px;
+  }
+
+  .gem-heading {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .gem-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    grid-template-rows: none;
+    grid-auto-rows: 149px;
+    grid-auto-flow: row;
+    margin-bottom: 65px;
+  }
+
+  .gem-item {
+    padding: 8px;
+  }
+
+  .gem-image img {
+    height: 133px;
+  }
+
+  .explore-button {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+  }
+
+  .footer {
+    padding-bottom: 30px;
+  }
+
+  .footer-top {
+    padding-bottom: 40px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-column:first-child {
+    max-width: 268px;
   }
 }
