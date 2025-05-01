@@ -1,0 +1,41 @@
+footer.footer 
+      .container.footer-container
+        .footer-top
+          .footer-columns 
+            .footer-column
+              a.footer-logo(href="/") 
+                img.footer-logo-img(srcSet="./assets/img/logo.png 2x", alt="")
+                span.footer-logo-name Airtrav
+              p.footer-information Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+              form.footer-subscribe(action="" autocomplete) 
+                input.footer-email(type="text" placeholder="Enter your email")
+                button.footer-submit(type="submit")
+                  img(src="./assets/img/icon-arrow-right.png", alt="arrow-icon", srcset="./assets/img/icon-arrow-right.png 2x")
+              
+            .footer-column
+              h2.footer-column-heading Services
+              ul.footer-column-list 
+                each val in ["Trip Planner", "Tour Planning", "Tour Guide", "Tour Package", "Tour advice"]
+                  li.footer-column-item 
+                    a(href="")= val 
+            .footer-column
+              h2.footer-column-heading Services
+              ul.footer-column-list 
+                each val in ["Trip Planner", "Tour Planning", "Tour Guide", "Tour Package", "Tour advice"]
+                  li.footer-column-item 
+                    a(href="")= val 
+            .footer-column
+              h2.footer-column-heading Services
+              ul.footer-column-list 
+                each val in ["Trip Planner", "Tour Planning", "Tour Guide", "Tour Package", "Tour advice"]
+                  li.footer-column-item 
+                    a(href="")= val 
+
+        .footer-bottom 
+          p.footer-copyright Copyright© 2021 UIHUT LLC. All rights reserved
+          ul.footer-media-list 
+            each val in [1,2,3,4]
+              li.footer-media-item      
+                a.media-link(href="/") 
+                  img(src="./assets/img/fb-icon.png", srcset="./assets/img/fb-icon.png 2x" alt="fb")
+

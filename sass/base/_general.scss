@@ -1,0 +1,31 @@
+:root {
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "DM sans", sans-serif;
+  --primary-color: #3b71fe;
+
+  --bg-color-primary: white;
+
+  --primary-font-color: white;
+  --gray2: rgba(53, 57, 69, 0.8);
+  --gray1: #23262f;
+  --gray3b: #3b3e44;
+  --gray4: #b1b5c3;
+  --gray7: #e6e8ec;
+  --fs-default: 14px;
+  --fw-default: 400;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: #ffffff;
+  font-weight: var(--fw-default);
+  color: var(--gray4);
+  font-size: var(--fs-default);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}

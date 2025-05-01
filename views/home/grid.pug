@@ -1,0 +1,10 @@
+section.grid-layout-section
+  .container
+    h2.heading Grid Layout Practice
+    ul.grid-list
+      -var n = 0 
+      each val in [1,2,3,4,5]
+        -n++
+        .grid-item
+          span=n
+          img(src="https://picsum.photos/500/500", alt="")   

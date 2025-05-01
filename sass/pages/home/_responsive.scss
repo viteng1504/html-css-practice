@@ -1,0 +1,96 @@
+/* Resposive */
+@media screen and (max-width: 1023.98px) {
+  
+  .tour-list {
+    flex-direction: column;
+
+    .tour {
+      // width: calc(50% - 30px);
+      //cách 2
+      
+    }
+  }
+  
+  .sight-list {
+    --columns: 2;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .tour-list {
+    row-gap: 20px;
+  }
+  .tour {
+    width: 100%;
+  }
+  .tour-price,
+  .tour-review,
+  .tour-review-count,
+  .tour-duration,
+  .tour-button {
+    font-size: 12px;
+  }
+  .tour-title {
+    font-size: 16px;
+  }
+
+  .sight-list {
+    --columns: 1;
+  }
+  .grid-list {
+    grid-template-rows: 150px 150px 100px;
+  }
+  .hidden-gems {
+    padding-bottom: 30px;
+  }
+  .gem-heading {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .gem-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    grid-template-rows: none;
+    grid-auto-rows: 149px;
+    grid-auto-flow: row;
+    margin-bottom: 65px;
+  }
+  .gem-item {
+    padding: 8px;
+  }
+  .gem-image img {
+    height: 133px;
+  }
+  .explore-button {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .footer {
+    padding-bottom: 30px;
+  }
+  .footer-top {
+    padding-bottom: 40px;
+  }
+  .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-column:first-child {
+    max-width: 268px;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 1023.9px) {
+  .popular-list {
+    /* width: calc(50% - 30px); */
+    --columns: 2;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .popular-list {
+    --columns: 1;
+  }
+}

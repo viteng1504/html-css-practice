@@ -1,0 +1,50 @@
+
+mixin tourItem(image, price, title, reviewRate, reviewCount, duration, tourPrice )
+        .tour
+          .tour-top
+            img.tour-img(src=image, alt='img')
+            span.tour-price From $#{price}
+          .tour-content
+            h3.tour-title=title
+            .tour-rating
+              .tour-review
+                .tour-star
+                  img.tour-star-icon(src='./assets/img/star-icon.png', alt='star-icon')
+                span.tour-review-count #{reviewRate} (#{reviewCount} reviews)  
+              span.tour-duration Duration: #{duration} hours
+            a.tour-button(href='www.youtube.com', target='_blank', rel='noopener noreferrerr') Tours Price $#{tourPrice}
+
+mixin popularItem(img, time, title, review, reviewCount)
+        .popular-item  
+          .popular-top
+            .popular-image-overlay
+            img.popular-img(src=img, alt="img")
+            a.popular-button(href="http://youtube.com") Must See
+          .popular-content 
+            .popular-time= time
+            h3.popular-title= title
+            .popular-rating 
+              img.popular-star-icon(src="./assets/img/star-icon.png", alt="star")
+              span.popular-review #{review} (#{reviewCount} reviews)
+
+mixin sightItem() 
+        .sight-item 
+          .sight-image  
+            img.sight-img(src="https://picsum.photos/400/300", alt="")
+            span.sight-price From $40
+          .sight-content 
+            h3.sight-title Bridge on the River Kwai and Thailands Burma Railway Tour ddddddddddddddddddddddddddddddd  
+            .sight-rating
+              .sight-review
+                img.sight-star-icon(src="./assets/img/star-icon.png", alt="")
+                span.sight-review-count 4.8 (12 reviews)
+              span.sight-duration Duration: 9 hours
+            a.sight-price-button(href="http://facebook.com")  Tours Price $61  
+
+mixin gemItem()
+        .gem-item   
+          .gem-image 
+            img(src="https://picsum.photos/500/500", alt="")
+            .gem-content 
+              h3.gem-title Bangkok Trip
+              .gem-time 27 Sep, 2020

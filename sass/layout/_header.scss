@@ -1,0 +1,41 @@
+@use "../utils";
+
+.header {
+  background-color: var(--bg-color-primary);
+  box-shadow: 6px 0 30px rgba($color: #0f0f0f, $alpha: 0.08);
+  padding: 16px 0;
+  margin-bottom: 70px;
+
+  .container {
+    margin-block: 0;
+    padding: 0;
+  }
+
+  &-list {
+    @include utils.flex(center, center, 20px);
+    margin: 16 auto;
+  }
+
+  &-item {
+    background-color: var(--gray7);
+    color: var(--gray4);
+    width: 128px;
+    height: 48px;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--primary-font-color);
+      font-weight: 700;
+    }
+  }
+}
